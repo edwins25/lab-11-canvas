@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+<link rel="stylesheet" type="text/css" href="page.css">
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="300" lenth="300">
+    </canvas>
+
+    <script>
+    function draw(i)
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+      context.fillStyle = "yellow"
+      context.fillRect (i, 30, 30, 30);
+
+    }
+
+    for (var i = 5; i >= 1; i--)
+    {
+      draw(i*35);
+
+    }
+    </script>
+  </body>
+</html>

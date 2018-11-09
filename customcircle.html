@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+<link rel="stylesheet" type="text/css" href="page.css">
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="300" lenth="300">
+    </canvas>
+
+    <script>
+      var color =  prompt("Give me a color.\nOnly Red , Blue or Green!")
+      function draw()
+      {
+        if (color !== "blue" && color !== "red" && color !== "green")
+        {
+          color = "yellow"
+        }
+        var r = prompt("What do you want for the radius of the Circle")
+        var x = parseInt(r)
+        var sketch = document.getElementById('sketch');
+        var context = sketch.getContext("2d");
+
+
+        context.fillStyle = color;
+        context.beginPath();
+        context.arc(200, 80 , x , 0, 2 * Math.PI , true);
+        context.closePath();
+        context.fill();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="300" lenth="300">
+    </canvas>
+
+    <script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+    function draw(){
+      context.fillStyle = "red"
+      context.fillRect (30, 30, 50, 50);
+      context.fillStyle = "blue"
+      context.beginPath();
+      context.arc(100, 30 , 20 , 0, 2 * Math.PI , true);
+      context.closePath();
+      context.fill();
+    }
+
+    </script>
+  </body>
+</html>
