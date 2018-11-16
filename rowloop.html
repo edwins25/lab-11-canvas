@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,21 +9,23 @@
 </head>
   </head>
   <body onload="draw()">
-    <canvas id="sketch" width="1000" height="1000">
+    <canvas id="sketch" width="1500" height="1000">
     </canvas>
 
     <script>
-var sketch = document.getElementById('sketch');
-var context = sketch.getContext("2d");
-    function draw(){
-      context.fillStyle = "yellow"
-      context.fillRect (30, 30, 100, 100);
+    function draw(i)
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+    }
+    for (var i = 5; i >= 1; i--)
+    {
+      context.fillStyle = "#CC3399"
       context.beginPath();
-      context.arc(200, 80 , 50 , 0, 2 * Math.PI , true);
+      context.arc(i*10, b*10 , 50 , 0, 2 * Math.PI , true);
       context.closePath();
       context.fill();
     }
-
     </script>
   </body>
 </html>
