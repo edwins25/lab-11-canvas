@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="1000" height="1000">
+    </canvas>
+
+    <script>
+    function draw()
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+      for (var i = 1; i <9; i++)
+      for (var b = 1; b <9; b++)
+      {
+        if (i%2===0){
+          context.fillStyle = "yellow"
+          context.fillRect (i*100,b*200,100,100)
+        }
+else {
+  context.fillStyle = "black"
+  context.fillRect (i*100,b*200,100,100)
+  context.fillRect (i*200,b*100,100,100)
+}
+}
+
+}
+    </script>
+  </body>
+</html>
